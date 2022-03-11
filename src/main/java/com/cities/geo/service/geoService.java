@@ -42,7 +42,6 @@ public class geoService {
 		{
 			// Archivo de donde se consumen las ciudades - Esta alojado en el mismo servidor de la aplicación
 			URL url = new URL("https://almacenamientogeo.file.core.windows.net/archivo/test.json?sv=2020-10-02&st=2022-03-11T20%3A15%3A02Z&se=2022-03-12T20%3A15%3A02Z&sr=f&sp=r&sig=RAP45Xy7EVbWSdrREbB3DpyhlkHG7J0ft4V5VUkg%2B5A%3D");
-			
 			ObjectMapper mapper = new ObjectMapper().configure(DeserializationFeature.ACCEPT_SINGLE_VALUE_AS_ARRAY, true);
 	        CollectionType collectionTypes = mapper.getTypeFactory().constructCollectionType(List.class, geoname.class);
 	        citiesList = mapper.readValue(url.openStream(), collectionTypes);
