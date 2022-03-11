@@ -1,5 +1,5 @@
 package com.cities.geo.VO;
-
+// Clase creada para poder manipular el listado de ciudades del archivo
 public class geoname
 {
 	private int id;

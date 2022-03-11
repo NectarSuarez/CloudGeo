@@ -20,12 +20,14 @@ public class geoController
 	@Autowired
 	geoService geoService;
 	
+	// Función usada para probar la conexión con el Micro Servicio
 	@RequestMapping(value = "/Test", method = RequestMethod.GET)
 	public int MultiSinSigno(@RequestParam("a")int A, @RequestParam("b") int B) throws Exception
 	{
 		return geoService.Test(A, B);
 	}
 	
+	// Función principal requerida en el documento
 	@RequestMapping(value = "/suggestions", method = RequestMethod.GET)
 	public List<geoname> suggestions(@RequestParam("q") String q, @RequestParam(defaultValue="0.0") double latitude, @RequestParam(defaultValue="0.0") double longitude)
 	{
