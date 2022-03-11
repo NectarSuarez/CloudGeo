@@ -2,7 +2,7 @@ package com.cities.geo;
 
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
-import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RestController;
 
 @SpringBootApplication
@@ -13,7 +13,7 @@ public class CitiesApplication {
 		SpringApplication.run(CitiesApplication.class, args);
 	}
 
-	@RequestMapping(value = "/Home")
+	@GetMapping("/Home")
 	public String Home()
 	{
 		return "HOME GEO Cities";
